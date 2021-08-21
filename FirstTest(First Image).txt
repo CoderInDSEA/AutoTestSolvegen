@@ -1,0 +1,23 @@
+    it('should expanding first image', async () => {
+        const buttonFullscreen = await $('#wrpr_554967d44a32cua #text_1430959689730')
+        const ImageFullscreenCheck = await $('.zoom-image-cover')
+
+        await browser.url('https://raminjshsdgadfaddasjhhbjkafaadfbjsd.stage.storied.co/components-test-app/smartimage/')
+        await browser.setWindowSize(1920,1080)
+        await expect(ImageFullscreenCheck).toBeClickable()
+        await ImageFullscreenCheck.click()
+
+        const ImageFullscreenSize = await $('div.n2-appshell-styles  img') 
+        const ImageFullscreenHeight = await $('div.n2-appshell-styles  img') 
+        const ImageFullscreenWidth =  await $('div.n2-appshell-styles .swiper-zoom-container img')
+        const IndicatorFullScreen = await $('div.n2-appshell-styles .caption-truncated b')
+        
+        const widthFullscreenImage = await ImageFullscreenHeight.getSize('width')
+        const heightFullscreenImage = await ImageFullscreenWidth.getSize('height')
+
+        await expect(buttonFullscreen).toExist()
+        await expect(buttonFullscreen).toHaveAttributeContaining('n2-actions', 'fullscreen')
+        await expect(IndicatorFullScreen).toHaveText('Golden Gate Bridge')
+        await expect(ImageFullscreenSize).toHaveElementProperty('width', widthFullscreenImage)
+        await expect(ImageFullscreenSize).toHaveElementProperty('height', heightFullscreenImage)
+    });
