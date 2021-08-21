@@ -174,7 +174,6 @@ it('should expanding fifth image', async () => {
 
         await SmartImageCheck.click()
 
-        const FullscreenImageSize = await FullscreenImageLinkWidthHeight.getSize()
         const FullscreenImageHeight = await FullscreenImageLinkWidthHeight.getSize('height')
         const FullscreenImageWidth = await FullscreenImageLinkWidthHeight.getSize('width')
 
