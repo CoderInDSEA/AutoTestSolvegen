@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".vertical-pane-container-active #text_5abe7f3fb8987 span\"}\n  (Session info: chrome=92.0.4515.159)",
+  "stacktrace": "Backtrace:\n\tOrdinal0 [0x00DC2A33+2501171]\n\tOrdinal0 [0x00D5D1C1+2085313]\n\tOrdinal0 [0x00C61FA8+1056680]\n\tOrdinal0 [0x00C8C78B+1230731]\n\tOrdinal0 [0x00CB64A2+1402018]\n\tOrdinal0 [0x00CA568A+1332874]\n\tOrdinal0 [0x00CB48BC+1394876]\n\tOrdinal0 [0x00CA551B+1332507]\n\tOrdinal0 [0x00C81D74+1187188]\n\tOrdinal0 [0x00C82BD9+1190873]\n\tGetHandleVerifier [0x00F3EFE6+1504438]\n\tGetHandleVerifier [0x00FEDDA5+2220661]\n\tGetHandleVerifier [0x00E45589+481881]\n\tGetHandleVerifier [0x00E44639+477961]\n\tOrdinal0 [0x00D628BD+2107581]\n\tOrdinal0 [0x00D66728+2123560]\n\tOrdinal0 [0x00D66862+2123874]\n\tOrdinal0 [0x00D6FA81+2161281]\n\tBaseThreadInitThunk [0x7758FA29+25]\n\tRtlGetAppContainerNamedObjectPath [0x77C67A7E+286]\n\tRtlGetAppContainerNamedObjectPath [0x77C67A4E+238]\n"
+}

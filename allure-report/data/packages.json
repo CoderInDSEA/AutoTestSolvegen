@@ -1,0 +1,91 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "auto tests for testing text animation on scroll down and up",
+    "children" : [ {
+      "name" : "Scroll down and up",
+      "uid" : "deab194bb8656991",
+      "parentUid" : "bda2e3f6647716e0953b4a47d5368151",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629571548769,
+        "stop" : 1629571565678,
+        "duration" : 16909
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-92.0.4515.159" ]
+    } ],
+    "uid" : "bda2e3f6647716e0953b4a47d5368151"
+  }, {
+    "name" : "auto tests for testing full screen mode of smart image",
+    "children" : [ {
+      "name" : "should expanding first image",
+      "uid" : "77bf899e3da13486",
+      "parentUid" : "9749606f37c7a81bda59cfcf15efa323",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629571548784,
+        "stop" : 1629571562618,
+        "duration" : 13834
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-92.0.4515.159" ]
+    }, {
+      "name" : "should expanding second image",
+      "uid" : "d73bcdda253b990",
+      "parentUid" : "9749606f37c7a81bda59cfcf15efa323",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629571562619,
+        "stop" : 1629571570745,
+        "duration" : 8126
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-92.0.4515.159" ]
+    }, {
+      "name" : "should expanding third image",
+      "uid" : "48e7d7f196559c35",
+      "parentUid" : "9749606f37c7a81bda59cfcf15efa323",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629571570746,
+        "stop" : 1629571575847,
+        "duration" : 5101
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-92.0.4515.159" ]
+    }, {
+      "name" : "should expanding fourth image",
+      "uid" : "f5b9a54e50c2450d",
+      "parentUid" : "9749606f37c7a81bda59cfcf15efa323",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629571575847,
+        "stop" : 1629571582330,
+        "duration" : 6483
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-92.0.4515.159" ]
+    }, {
+      "name" : "should expanding fifth image",
+      "uid" : "c40ab5df7ff8c4ae",
+      "parentUid" : "9749606f37c7a81bda59cfcf15efa323",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629571582331,
+        "stop" : 1629571587315,
+        "duration" : 4984
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-92.0.4515.159" ]
+    } ],
+    "uid" : "9749606f37c7a81bda59cfcf15efa323"
+  } ]
+}
