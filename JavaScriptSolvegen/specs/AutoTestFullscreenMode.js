@@ -1,152 +1,107 @@
+import FullscreenMode from "../SmartImage/FullscreenMode.Page";
+
 describe("auto tests for testing full screen mode of smart image", () => {
   it("should expanding first image", async () => {
-    const buttonFullscreen = await $(
-      "#wrpr_554967d44a32cua #text_1430959689730"
-    );
-    const SmartImageCheck = await $(".zoom-image-cover");
-
-    await browser.url(
-      "https://raminjshsdgadfaddasjhhbjkafaadfbjsd.stage.storied.co/components-test-app/smartimage/"
-    );
+    var CheckList = 0;
+    await FullscreenMode.open();
     await browser.setWindowSize(1920, 1080);
 
-    const SmartImageSize = await SmartImageCheck.getSize();
+    const SmartImageSize = await FullscreenMode.GetSizeSmartImage();
 
-    await SmartImageCheck.click();
+    await FullscreenMode.submit();
 
-    const CheckSmartImageSize = await SmartImageCheck.getSize();
-
-    const FullscreenImageSizeLink = await $("div.n2-appshell-styles  img");
-    const FullscrenImageHeightLink = await $("div.n2-appshell-styles  img");
-    const FullscreenImageWidthLink = await $(
-      "div.n2-appshell-styles .swiper-zoom-container img"
-    );
+    const CheckSmartImageSize = await FullscreenMode.GetSizeFullscreenImage();
 
     if (CheckSmartImageSize != SmartImageSize) {
-      const IndicatorFullScreen = await $(
-        "div.n2-appshell-styles .caption-truncated b"
-      );
-      const FullscreenImageWidth = await FullscrenImageHeightLink.getSize(
+      const FullscreenImageWidth = await FullscreenMode.GetSizeFullscreenImage(
         "width"
       );
-      const FullscreenImageHeight = await FullscreenImageWidthLink.getSize(
+      const FullscreenImageHeight = await FullscreenMode.GetSizeFullscreenImage(
         "height"
       );
 
-      await expect(buttonFullscreen).toExist();
-      await expect(buttonFullscreen).toHaveAttributeContaining(
+      await expect(FullscreenMode.buttonFullscreen).toExist();
+      await expect(FullscreenMode.buttonFullscreen).toHaveAttributeContaining(
         "n2-actions",
         "fullscreen"
       );
-      await expect(IndicatorFullScreen).toHaveText("Golden Gate Bridge");
-      await expect(FullscreenImageSizeLink).toHaveElementProperty(
-        "width",
-        FullscreenImageWidth
+      await expect(FullscreenMode.IndicatorFullscreen).toHaveText(
+        "Golden Gate Bridge"
       );
-      await expect(FullscreenImageSizeLink).toHaveElementProperty(
-        "height",
-        FullscreenImageHeight
-      );
+      await expect(
+        FullscreenMode.FullscreenImageSizeLink
+      ).toHaveElementProperty("width", FullscreenMode.FullscreenImageWidth);
+      await expect(
+        FullscreenMode.FullscreenImageSizeLink
+      ).toHaveElementProperty("height", FullscreenMode.FullscreenImageHeight);
     }
   });
   it("should expanding second image", async () => {
-    const SmartImageCheck = await $("#hash--2085246449 .zoom-image-contain");
-    const buttonFullscreen = await $(
-      "#hash--2085246449 .smartimage-interaction-icon"
-    );
-
     await browser.url(
       "https://raminjshsdgadfaddasjhhbjkafaadfbjsd.stage.storied.co/components-test-app/smartimage-contain/"
     );
     await browser.setWindowSize(1920, 1080);
 
-    const SmartImageSize = await SmartImageCheck.getSize();
+    const SmartImageSize = await FullscreenMode.GetSizeSmartImage();
 
-    await SmartImageCheck.click();
+    await FullscreenMode.submit();
 
-    const CheckSmartImageSize = await SmartImageCheck.getSize();
-
-    const FullscreenImageSizeLink = await $("div.n2-appshell-styles  img");
-    const FullscreenImageHeightLink = await $("div.n2-appshell-styles  img");
-    const FullscreenImageWidthLink = await $(
-      "div.n2-appshell-styles .swiper-zoom-container img"
-    );
+    const CheckSmartImageSize = await FullscreenMode.GetSizeFullscreenImage();
 
     if (CheckSmartImageSize != SmartImageSize) {
-      const IndicatorFullScreen = await $(
-        "div.n2-appshell-styles .caption-truncated b"
-      );
-      const widthFullscreenImage = await FullscreenImageHeightLink.getSize(
-        "width"
-      );
-      const heightFullscreenImage = await FullscreenImageWidthLink.getSize(
-        "height"
-      );
+      const widthFullscreenImage =
+        await FullscreenMode.FullscreenImageHeightLink.getSize("width");
+      const heightFullscreenImage =
+        await FullscreenMode.FullscreenImageWidthLink.getSize("height");
 
-      await expect(buttonFullscreen).toExist();
-      await expect(buttonFullscreen).toHaveAttributeContaining(
+      await expect(FullscreenMode.buttonFullscreen).toExist();
+      await expect(FullscreenMode.buttonFullscreen).toHaveAttributeContaining(
         "aria-label",
         "fullscreen"
       );
-      await expect(IndicatorFullScreen).toHaveText("Golden Gate Bridge");
-      await expect(FullscreenImageSizeLink).toHaveElementProperty(
-        "width",
-        widthFullscreenImage
+      await expect(FullscreenMode.IndicatorFullScreen).toHaveText(
+        "Golden Gate Bridge"
       );
-      await expect(FullscreenImageSizeLink).toHaveElementProperty(
-        "height",
-        heightFullscreenImage
-      );
+      await expect(
+        FullscreenMode.FullscreenImageSizeLink
+      ).toHaveElementProperty("width", FullscreenMode.widthFullscreenImage);
+      await expect(
+        FullscreenMode.FullscreenImageSizeLink
+      ).toHaveElementProperty("height", FullscreenMode.heightFullscreenImage);
     }
   });
   it("should expanding third image", async () => {
-    const SmartImageCheck = await $("#hash-1466146511 .zoom-image-contain");
-    const buttonFullscreen = await $(
-      "#hash-1466146511 .smartimage-interaction-icon"
-    );
-
     await browser.url(
       "https://raminjshsdgadfaddasjhhbjkafaadfbjsd.stage.storied.co/components-test-app/smartimage-auto-height/"
     );
     await browser.setWindowSize(1920, 1080);
 
-    const SmartImageSize = await SmartImageCheck.getSize();
+    const SmartImageSize = await FullscreenMode.GetSizeSmartImage();
 
-    await SmartImageCheck.click();
+    await FullscreenMode.submit();
 
-    const CheckSmartImageSize = await SmartImageCheck.getSize();
-
-    const FullscreenImageSizeLink = await $("div.n2-appshell-styles  img");
-    const FullscreenImageHeightLink = await $("div.n2-appshell-styles  img");
-    const FullscreenImageWidthLink = await $(
-      "div.n2-appshell-styles .swiper-zoom-container img"
-    );
+    const CheckSmartImageSize = await FullscreenMode.GetSizeFullscreenImage();
 
     if (CheckSmartImageSize != SmartImageSize) {
-      const IndicatorFullScreen = await $(
-        "div.n2-appshell-styles .caption-truncated b"
-      );
-      const FullscreenImageHeight = await FullscreenImageHeightLink.getSize(
-        "width"
-      );
-      const FullscreenImageWidth = await FullscreenImageWidthLink.getSize(
-        "height"
-      );
+      const FullscreenImageHeight =
+        await FullscreenMode.FullscreenImageHeightLink.getSize("width");
+      const FullscreenImageWidth =
+        await FullscreenMode.FullscreenImageWidthLink.getSize("height");
 
-      await expect(buttonFullscreen).toExist();
-      await expect(buttonFullscreen).toHaveAttributeContaining(
+      await expect(FullscreenMode.buttonFullscreen).toExist();
+      await expect(FullscreenMode.buttonFullscreen).toHaveAttributeContaining(
         "aria-label",
         "fullscreen"
       );
-      await expect(IndicatorFullScreen).toHaveText("Golden Gate Bridge");
-      await expect(FullscreenImageSizeLink).toHaveElementProperty(
-        "width",
-        FullscreenImageHeight
+      await expect(FullscreenMode.IndicatorFullScreen).toHaveText(
+        "Golden Gate Bridge"
       );
-      await expect(FullscreenImageSizeLink).toHaveElementProperty(
-        "height",
-        FullscreenImageWidth
-      );
+      await expect(
+        FullscreenMode.FullscreenImageSizeLink
+      ).toHaveElementProperty("width", FullscreenMode.FullscreenImageHeight);
+      await expect(
+        FullscreenMode.FullscreenImageSizeLink
+      ).toHaveElementProperty("height", FullscreenMode.FullscreenImageWidth);
     }
   });
   it("should expanding fourth image", async () => {
@@ -163,19 +118,22 @@ describe("auto tests for testing full screen mode of smart image", () => {
       TestingText = [];
     const Text = ["New York Station", "Fox", "Golden Gate Bridge"];
 
-    SmartImageCheck[0] = await $("#hash--508119828 .swiper-slide-active");
+    SmartImageCheck[0] = await $(
+      '[aria-hidden = "false"] .swiper-slide-active[aria-label = "1 / 3"]'
+    );
     ButtonToFullscreen[0] = await $(
-      "#hash--508119828 .smartimage-interaction-icon"
+      '[aria-hidden = "false"] [caption-short*="New"] .smartimage-interaction-icon'
     );
 
-    SmartImageCheck[1] = await $("#hash-113815255 .swiper-slide-active");
+    SmartImageCheck[1] = await $(
+      '[aria-hidden = "false"] .swiper-slide-active[aria-label = "2 / 3"]'
+    );
     ButtonToFullscreen[1] = await $(
-      "#hash-113815255 .smartimage-interaction-icon"
+      '[aria-hidden = "false"] [caption-short*="New"] .smartimage-interaction-icon'
     );
 
-    SmartImageCheck[2] = await $("#hash--2124326262 .swiper-slide-active");
-    ButtonToFullscreen[2] = await $(
-      "#hash--2124326262 .smartimage-interaction-icon"
+    SmartImageCheck[2] = await $(
+      '[aria-hidden = "false"] .swiper-slide-active[aria-label = "3 / 3"]'
     );
 
     await browser.url(
@@ -249,16 +207,17 @@ describe("auto tests for testing full screen mode of smart image", () => {
         SmartImageHeigth[i] != FullscreenImageHeight[i]
       ) {
         await expect(TestingText[i]).toHaveText(Text[i]);
-        await expect(ButtonToFullscreen[i]).toHaveAttributeContaining(
-          "aria-label",
-          "fullscreen"
-        );
-        i - 1 < SmartImageWidth.length
-          ? await NavigationBar.click()
-          : await CloseFullscreen.click();
+
+        if (i - 1 < SmartImageWidth.length) {
+          await expect(ButtonToFullscreen[i]).not.toExist();
+          await NavigationBar.click();
+        } else {
+          await CloseFullscreen.click();
+        }
       }
     }
   });
+
   it("should expanding fifth image", async () => {
     const SmartImageCheck = await $('div[y-location="4"]  img');
     const FullscreenImageSizeLink = await $('div[y-location="4"]  img');

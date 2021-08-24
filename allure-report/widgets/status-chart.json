@@ -1,60 +1,60 @@
 [ {
-  "uid" : "f5b9a54e50c2450d",
-  "name" : "should expanding fourth image",
-  "time" : {
-    "start" : 1629571575847,
-    "stop" : 1629571582330,
-    "duration" : 6483
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "48e7d7f196559c35",
-  "name" : "should expanding third image",
-  "time" : {
-    "start" : 1629571570746,
-    "stop" : 1629571575847,
-    "duration" : 5101
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "c40ab5df7ff8c4ae",
+  "uid" : "7c6b3ef7b7249293",
   "name" : "should expanding fifth image",
   "time" : {
-    "start" : 1629571582331,
-    "stop" : 1629571587315,
-    "duration" : 4984
+    "start" : 1629843529972,
+    "stop" : 1629843534663,
+    "duration" : 4691
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "deab194bb8656991",
-  "name" : "Scroll down and up",
+  "uid" : "fda6dab1a5c647b3",
+  "name" : "should expanding fourth image",
   "time" : {
-    "start" : 1629571548769,
-    "stop" : 1629571565678,
-    "duration" : 16909
+    "start" : 1629843522711,
+    "stop" : 1629843529972,
+    "duration" : 7261
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "77bf899e3da13486",
+  "uid" : "2d0da13c1e59c64c",
+  "name" : "should expanding third image",
+  "time" : {
+    "start" : 1629843517550,
+    "stop" : 1629843522709,
+    "duration" : 5159
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "97c8dde69e2f4c9a",
   "name" : "should expanding first image",
   "time" : {
-    "start" : 1629571548784,
-    "stop" : 1629571562618,
-    "duration" : 13834
+    "start" : 1629843495559,
+    "stop" : 1629843508315,
+    "duration" : 12756
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "d73bcdda253b990",
+  "uid" : "f2c957804501ab38",
+  "name" : "Scroll down and up",
+  "time" : {
+    "start" : 1629843495324,
+    "stop" : 1629843514105,
+    "duration" : 18781
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fc8d5fa2130d175a",
   "name" : "should expanding second image",
   "time" : {
-    "start" : 1629571562619,
-    "stop" : 1629571570745,
-    "duration" : 8126
+    "start" : 1629843508316,
+    "stop" : 1629843517550,
+    "duration" : 9234
   },
   "status" : "passed",
   "severity" : "normal"
